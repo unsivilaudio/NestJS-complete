@@ -1,0 +1,24 @@
+### Create a Report
+POST http://localhost:3000/reports/
+content-type: application/json
+
+{
+    "make": "Honda",
+    "model": "Civic",
+    "year": 1980,
+    "mileage": 100123,
+    "lng": 0,
+    "lat": 0,
+    "price": 500
+}
+
+### Approve/Unapprove a Report
+PATCH http://localhost:3000/reports/6
+Content-Type: application/json
+
+{
+    "approved": true
+}
+
+### Get an Estimate for an existing vehicle
+GET http://localhost:3000/reports?make=Honda&model=Civic&year=1980&mileage=100123&lng=0&lat=0
